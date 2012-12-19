@@ -1,17 +1,28 @@
 
+bannerHidden = false
+
 $(document).ready ->
 
   ###
   # Menu Manager
   ###
 
+  ###
   $("html, body").animate {
     scrollTop: 0
   }, {druation: 3000, easing: "easeInOutQuad"}
+  ###
 
   $("#main_menu a").click (e)->
 
     target = $($(this).attr("href"))
+
+    topFix = 0
+
+    if bannerHidden
+      topFix = 98
+    else
+      topFix = 248
 
     offset = 0
 
@@ -19,7 +30,7 @@ $(document).ready ->
       offset = 35
 
     $("html, body").animate {
-      scrollTop: target.offset().top - 248 + offset
+      scrollTop: target.offset().top - topFix + offset
     }, {druation: 3000, easing: "easeInOutQuad"}
 
     e.preventDefault();
@@ -53,16 +64,75 @@ $(document).ready ->
 # Scroll Menu
 ###
 
+scrollTimeout = null
+
 $(window).scroll (e)->
   curTop = $("body").scrollTop() || $("html").scrollTop()
 
+  maxScroll = $("body").outerHeight() - $(window).outerHeight() - 1 # Fix Last Menu
+
+  topFix = 0
+
+  clearTimeout(scrollTimeout)
+
+  scrollTimeout = setTimeout (()->
+    if curTop > 250
+      bannerHidden = hideBanner()
+    else
+      bannerHidden = showBanner()
+
+    console.log [curTop, maxScroll]
+  ),100
+
+  if curTop >= maxScroll
+    $("#main_menu a").each (i, el)->
+      $(el).removeClass("active")
+
+    $("#main_menu a:last").addClass("active")
+    return
+
+  if bannerHidden
+    topFix = 100
+  else
+    topFix = 250
+
   $("#main_menu a").each (i, el)->
     target = $($(el).attr("href"))
-    offsetTop = Math.floor(target.offset().top) - 250
+    offsetTop = Math.floor(target.offset().top) - topFix
     height = $(target).outerHeight()
 
     if (curTop >= offsetTop) and (curTop < (offsetTop + height))
       $(el).addClass("active")
     else
       $(el).removeClass("active")
+
+hideBanner = ->
+  if !bannerHidden
+    $("body").animate {
+      'paddingTop': 100
+    }, {duration: 1000, easing: "easeInOutQuad"}
+    $("header[role=header]").animate {
+      'height': 100
+    }, {duration: 1000, easing: "easeOutQuad"}
+    $("header[role=header] h1").animate {
+      height: 0,
+      opacity: 0
+    }, {duration: 1000, easing: "easeOutQuad"}
+
+  return true
+
+showBanner = ->
+  if bannerHidden
+    $("body").animate {
+      'paddingTop': 250
+    }, {duration: 1000, easing: "easeInOutQuad"}
+    $("header[role=header]").animate {
+      height: 250
+    }, {duration: 1000, easing: "easeInQuad"}
+    $("header[role=header] h1").animate {
+      height: 150,
+      opacity: 1
+    }, {duration: 1000, easing: "easeInQuad"}
+
+  return false
 
