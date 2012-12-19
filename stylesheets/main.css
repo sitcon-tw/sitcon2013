@@ -89,12 +89,12 @@ textarea {
 /**
  * Global
  */
-/* line 98, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 html {
   font-size: 12px;
 }
 
-/* line 102, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 body {
   font-size: 12px;
   font-family: "Droid Sans", "Droid Sans Fallback", "微軟正黑體", "Microsoft JhengHei", "STHeiti", "Heiti TC", SimSun, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -103,22 +103,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 112, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 a {
   color: #1a1a1a;
   text-decoration: none;
 }
-/* line 116, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 a.link-light {
   color: #40a800;
 }
 
-/* line 121, ../sass/main.scss */
+/* line 122, ../sass/main.scss */
 hr {
   border: none;
   border-bottom: 1px solid #1a1a1a;
 }
-/* line 126, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 hr.light {
   border-bottom: 1px solid white;
 }
@@ -126,7 +126,7 @@ hr.light {
 /**
  * UI Element
  */
-/* line 135, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -136,31 +136,31 @@ hr.light {
   padding: .5em .7em;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-/* line 142, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 .button.light {
   background: white;
 }
-/* line 146, ../sass/main.scss */
+/* line 147, ../sass/main.scss */
 .button.normal {
   color: white;
   background: #40a800;
 }
-/* line 151, ../sass/main.scss */
+/* line 152, ../sass/main.scss */
 .button.dark {
   color: white;
   background: #1a1a1a;
 }
-/* line 156, ../sass/main.scss */
+/* line 157, ../sass/main.scss */
 .button.large {
   font-size: 24px;
   font-size: 2rem;
 }
-/* line 161, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 .button.middle {
   font-size: 18px;
   font-size: 1.5rem;
 }
-/* line 166, ../sass/main.scss */
+/* line 167, ../sass/main.scss */
 .button.small {
   font-size: 12px;
   font-size: 1rem;
@@ -169,7 +169,7 @@ hr.light {
 /**
  * Grid
  */
-/* line 176, ../sass/main.scss */
+/* line 177, ../sass/main.scss */
 .container {
   width: 940px;
   margin: 0 auto;
@@ -272,7 +272,7 @@ hr.light {
 /**
  * Header
  */
-/* line 188, ../sass/main.scss */
+/* line 189, ../sass/main.scss */
 header[role="header"] {
   height: 250px;
   width: 100%;
@@ -282,7 +282,7 @@ header[role="header"] {
   top: 0;
   *zoom: 1;
 }
-/* line 190, ../sass/main.scss */
+/* line 191, ../sass/main.scss */
 header[role="header"] h1 {
   text-indent: -999999px;
   background: url('../images/banner_logo.png?1355909500') center;
@@ -304,18 +304,22 @@ header[role="header"]:after {
 /**
  * Footer
  */
-/* line 218, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 footer[role="footer"] {
   letter-spacing: .15em;
   font-size: 13.2px;
   font-size: 1.1rem;
 }
-/* line 224, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 footer[role="footer"] .social {
   font-size: 15.6px;
   font-size: 1.3rem;
 }
 /* line 229, ../sass/main.scss */
+footer[role="footer"] .social a {
+  color: #FFF;
+}
+/* line 234, ../sass/main.scss */
 footer[role="footer"] .split {
   margin: 0 .5em;
   color: #595959;
@@ -324,22 +328,22 @@ footer[role="footer"] .split {
 /**
  * Navigator
  */
-/* line 241, ../sass/main.scss */
+/* line 246, ../sass/main.scss */
 nav[role="main_menu"] header {
   display: none;
 }
-/* line 245, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 nav[role="main_menu"] ul {
   text-align: center;
   padding: 0;
 }
-/* line 251, ../sass/main.scss */
+/* line 256, ../sass/main.scss */
 nav[role="main_menu"] li {
   display: inline;
   font-size: 24px;
   font-size: 2rem;
 }
-/* line 257, ../sass/main.scss */
+/* line 262, ../sass/main.scss */
 nav[role="main_menu"] li a {
   display: inline-block;
   color: #a6a6a6;
@@ -347,11 +351,11 @@ nav[role="main_menu"] li a {
   text-transform: uppercase;
   position: relative;
 }
-/* line 268, ../sass/main.scss */
+/* line 273, ../sass/main.scss */
 nav[role="main_menu"] li a:hover {
   color: #1a1a1a;
 }
-/* line 272, ../sass/main.scss */
+/* line 277, ../sass/main.scss */
 nav[role="main_menu"] li a.active {
   color: white;
   background: #40a800;
@@ -361,7 +365,7 @@ nav[role="main_menu"] li a.active {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 279, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 nav[role="main_menu"] li a.active:after {
   content: " ";
   display: block;
@@ -378,7 +382,7 @@ nav[role="main_menu"] li a.active:after {
 /**
  * Main Frame
  */
-/* line 309, ../sass/main.scss */
+/* line 314, ../sass/main.scss */
 #main_frame header h2 {
   font-size: 48px;
   font-size: 4rem;
@@ -386,26 +390,26 @@ nav[role="main_menu"] li a.active:after {
   text-transform: uppercase;
 }
 
-/* line 318, ../sass/main.scss */
+/* line 323, ../sass/main.scss */
 .section_green {
   background: #40a800;
-  color: white;
+  color: #1a1a1a;
   padding-bottom: 1em;
 }
 
-/* line 326, ../sass/main.scss */
+/* line 332, ../sass/main.scss */
 .section_black {
   background: #1a1a1a;
   color: white;
   padding-bottom: 1em;
 }
 
-/* line 334, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 .attach_arrow_green {
   padding-top: 50px;
   position: relative;
 }
-/* line 339, ../sass/main.scss */
+/* line 345, ../sass/main.scss */
 .attach_arrow_green:after {
   display: block;
   width: 0;
@@ -419,12 +423,12 @@ nav[role="main_menu"] li a.active:after {
   margin-left: -35px;
 }
 
-/* line 352, ../sass/main.scss */
+/* line 358, ../sass/main.scss */
 .attach_arrow_black {
   padding-top: 50px;
   position: relative;
 }
-/* line 357, ../sass/main.scss */
+/* line 363, ../sass/main.scss */
 .attach_arrow_black:after {
   display: block;
   width: 0;
@@ -438,12 +442,12 @@ nav[role="main_menu"] li a.active:after {
   margin-left: -35px;
 }
 
-/* line 370, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 .attach_arrow_white {
   padding-top: 50px;
   position: relative;
 }
-/* line 375, ../sass/main.scss */
+/* line 381, ../sass/main.scss */
 .attach_arrow_white:after {
   display: block;
   width: 0;
@@ -460,7 +464,7 @@ nav[role="main_menu"] li a.active:after {
 /**
  * Each Part
  */
-/* line 394, ../sass/main.scss */
+/* line 400, ../sass/main.scss */
 #about {
   font-size: 24px;
   font-size: 2rem;
@@ -468,35 +472,35 @@ nav[role="main_menu"] li a.active:after {
   letter-spacing: .15em;
 }
 
-/* line 405, ../sass/main.scss */
+/* line 411, ../sass/main.scss */
 #info {
   font-size: 18px;
   font-size: 1.5rem;
   letter-spacing: .15em;
   line-height: 1.5em;
 }
-/* line 406, ../sass/main.scss */
+/* line 412, ../sass/main.scss */
 #info > header {
   display: none;
 }
-/* line 410, ../sass/main.scss */
+/* line 416, ../sass/main.scss */
 #info h3 {
   text-transform: uppercase;
   font-size: 48px;
   font-size: 4rem;
   font-weight: normal;
 }
-/* line 423, ../sass/main.scss */
+/* line 429, ../sass/main.scss */
 #info .hint {
   font-size: 12px;
   font-size: 1rem;
   margin-left: .5em;
 }
-/* line 430, ../sass/main.scss */
+/* line 436, ../sass/main.scss */
 #info .register {
   position: relative;
 }
-/* line 433, ../sass/main.scss */
+/* line 439, ../sass/main.scss */
 #info .register:after {
   display: block;
   width: 0;
@@ -510,48 +514,48 @@ nav[role="main_menu"] li a.active:after {
   margin-top: -5px;
 }
 
-/* line 446, ../sass/main.scss */
+/* line 452, ../sass/main.scss */
 #time {
   font-size: 36px;
   font-size: 3rem;
   text-transform: uppercase;
   border-right: 1px solid #595959;
 }
-/* line 453, ../sass/main.scss */
+/* line 459, ../sass/main.scss */
 #time .register {
   font-size: 18px;
   font-size: 1.5rem;
 }
 
-/* line 465, ../sass/main.scss */
+/* line 471, ../sass/main.scss */
 #team h3 {
   font-size: 24px;
   font-size: 2rem;
   font-weight: normal;
   color: #595959;
 }
-/* line 473, ../sass/main.scss */
+/* line 479, ../sass/main.scss */
 #team h3 .leader {
   font-size: 14.00004px;
   font-size: 1.16667rem;
 }
 
-/* line 482, ../sass/main.scss */
+/* line 488, ../sass/main.scss */
 #speakers, #schedule, #sponsor {
   text-align: center;
   font-size: 36px;
   font-size: 3rem;
 }
-/* line 488, ../sass/main.scss */
+/* line 494, ../sass/main.scss */
 #speakers p, #schedule p, #sponsor p {
   text-transform: uppercase;
 }
-/* line 492, ../sass/main.scss */
+/* line 498, ../sass/main.scss */
 #speakers .span12, #speakers .span6, #schedule .span12, #schedule .span6, #sponsor .span12, #sponsor .span6 {
   margin-top: 0;
 }
 
-/* line 499, ../sass/main.scss */
+/* line 505, ../sass/main.scss */
 #location header {
   display: none;
 }
@@ -562,7 +566,7 @@ nav[role="main_menu"] li a.active:after {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 521, ../sass/main.scss */
+/* line 527, ../sass/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -570,7 +574,7 @@ nav[role="main_menu"] li a.active:after {
   *text-indent: -9999px;
 }
 
-/* line 528, ../sass/main.scss */
+/* line 534, ../sass/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -578,13 +582,13 @@ nav[role="main_menu"] li a.active:after {
   height: 100%;
 }
 
-/* line 535, ../sass/main.scss */
+/* line 541, ../sass/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 540, ../sass/main.scss */
+/* line 546, ../sass/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -596,7 +600,7 @@ nav[role="main_menu"] li a.active:after {
   width: 1px;
 }
 
-/* line 552, ../sass/main.scss */
+/* line 558, ../sass/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -607,24 +611,24 @@ nav[role="main_menu"] li a.active:after {
   width: auto;
 }
 
-/* line 561, ../sass/main.scss */
+/* line 567, ../sass/main.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 566, ../sass/main.scss */
+/* line 572, ../sass/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 571, ../sass/main.scss */
+/* line 577, ../sass/main.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 575, ../sass/main.scss */
+/* line 581, ../sass/main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -633,7 +637,7 @@ nav[role="main_menu"] li a.active:after {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 584, ../sass/main.scss */
+  /* line 590, ../sass/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -642,18 +646,18 @@ nav[role="main_menu"] li a.active:after {
     text-shadow: none !important;
   }
 
-  /* line 592, ../sass/main.scss */
+  /* line 598, ../sass/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 596, ../sass/main.scss */
+  /* line 602, ../sass/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 600, ../sass/main.scss */
+  /* line 606, ../sass/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -661,33 +665,33 @@ nav[role="main_menu"] li a.active:after {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 610, ../sass/main.scss */
+  /* line 616, ../sass/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 615, ../sass/main.scss */
+  /* line 621, ../sass/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 620, ../sass/main.scss */
+  /* line 626, ../sass/main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 625, ../sass/main.scss */
+  /* line 631, ../sass/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 629, ../sass/main.scss */
+  /* line 635, ../sass/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -696,7 +700,7 @@ nav[role="main_menu"] li a.active:after {
     margin: 0.5cm;
 }
 
-  /* line 639, ../sass/main.scss */
+  /* line 645, ../sass/main.scss */
   p,
   h2,
   h3 {
@@ -704,7 +708,7 @@ nav[role="main_menu"] li a.active:after {
     widows: 3;
   }
 
-  /* line 645, ../sass/main.scss */
+  /* line 651, ../sass/main.scss */
   h2,
   h3 {
     page-break-after: avoid;
