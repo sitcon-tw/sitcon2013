@@ -1,0 +1,67 @@
+/**
+ * Clear Fix
+ */
+
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Grid Count
+ */
+
+@mixin makeGrid($width, $column, $gutter) {
+  .row {
+    margin-left: $gutter * -1;
+
+    @include clearfix();
+  }
+
+  [class*="span"] {
+    margin-left: $gutter;
+    float: left;
+  }
+
+  @for $i from 1 through $column {
+    .span#{$i} {
+      margin-top: 1em;
+
+      width: $width * $i + ($gutter * ($i - 1));
+    }
+  }
+}
+
+/**
+ * Arrow Maker
+ */
+
+@mixin makeArrow($size, $color, $direction) {
+  display: block;
+
+  width: 0;
+  height: 0;
+
+  border: $size solid transparent;
+
+  @if $direction == "top" {
+    border-bottom: $size solid $color;
+  } @else if $direction == "bottom" {
+    border-top: $size solid $color;
+  } @else if $direction == "left" {
+    border-right: $size solid $color;
+  } @else if $direction == "right" {
+    border-left: $size solid $color;
+  }
+}

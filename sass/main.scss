@@ -1,0 +1,526 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/**
+ * Modules
+ */
+
+@import "mixin";
+@import "compass/css3";
+
+/**
+ * Fonts
+ */
+
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans");
+
+/**
+ * Global Variables
+ */
+
+$base_font_size: 12px;
+$base_line_height: $base_font_size * 1.5;
+
+$base_color: #a4c639;
+$second_color: adjust-lightness(black, 10%);
+$third_color: adjust-lightness(black, 65%);
+
+$grid_width: 60px;
+$grid_column: 12;
+$grid_gutter: 20px;
+$frame_width: ($grid_width + $grid_gutter) * $grid_column - $grid_gutter;
+
+
+/**
+ * Global
+ */
+
+html {
+  font-size: $base_font_size;
+}
+
+body {
+  font-size: $base_font_size;
+  font-family: "Droid Sans", "Droid Sans Fallback", "微軟正黑體","Microsoft JhengHei", "STHeiti", "Heiti TC", SimSun,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: $base_line_height;
+
+  padding-top: 300px;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $second_color;
+  text-decoration: none;
+}
+
+/**
+ * UI Element
+ */
+
+.button {
+  @include border-radius(5px);
+
+  padding: .5em;
+
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+  &.light {
+    background: white;
+  }
+
+  &.normal {
+    color: white;
+    background: $base_color;
+  }
+
+  &.dark {
+    color: white;
+    background: $second_color;
+  }
+}
+
+/**
+ * Grid
+ */
+
+.container {
+  width: $frame_width;
+
+  margin: 0 auto;
+}
+
+@include makeGrid(60px, 12, 20px);
+
+/**
+ * Header
+ */
+
+header[role="header"] {
+  // For LOGO
+  h1 {
+    text-indent: -999999px;
+
+    background: image-url("banner_logo.png") center;
+
+    width: 700px;
+    height: 200px;
+
+    margin: 0 auto;
+  }
+
+  height: 300px;
+  width: 100%;
+
+  z-index: 999;
+  background: white;
+
+  position: fixed;
+
+  top: 0;
+
+  @include clearfix();
+}
+
+/**
+ * Footer
+ */
+
+footer[role="footer"] {
+
+}
+
+/**
+ * Navigator
+ */
+
+nav[role="main_menu"] {
+  header {
+    display: none;
+  }
+
+  ul {
+    text-align: center;
+
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+
+    font-size: $base_font_size * 2;
+    font-size: 2rem;
+
+    a {
+      display: inline-block;
+
+      color: $third_color;
+
+      padding: .5em;
+
+      text-transform: uppercase;
+
+      position: relative;
+
+      &:hover {
+        color: $second_color;
+      }
+
+      &.active {
+        color: white;
+
+        background: $base_color;
+
+        @include border-radius(5px);
+
+        &:after {
+          content: " ";
+
+          display: block;
+
+          width: 0;
+          height: 0;
+
+          border: 7px solid transparent;
+          border-top: 7px solid $base_color;
+
+          position: absolute;
+          top: 100%;
+          left: 50%;
+
+          margin-left: -7px;
+        }
+      }
+    }
+  }
+
+}
+
+/**
+ * Main Frame
+ */
+
+#main_frame {
+
+  header {
+    h2 {
+      font-size: $base_font_size * 4;
+      font-size: 4rem;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.section_green {
+  background: $base_color;
+
+  color: white;
+
+  position: relative;
+
+  padding-bottom: 1em;
+}
+
+.section_black {
+  background: $second_color;
+
+  color: white;
+
+  position: relative;
+
+  padding-bottom: 1em;
+}
+
+.attach_arrow_green {
+  padding-top: 50px;
+
+  &:after {
+    @include makeArrow(35px, $base_color, "bottom");
+
+    content: " ";
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+
+    margin-left: -35px;
+  }
+}
+
+.attach_arrow_black {
+  padding-top: 50px;
+
+  &:after {
+    @include makeArrow(35px, $second_color, "bottom");
+
+    content: " ";
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+
+    margin-left: -35px;
+  }
+}
+
+/**
+ * Each Part
+ */
+
+// About
+
+#about {
+  font-size: $base_font_size * 2;
+  font-size: 2rem;
+
+  line-height: 1.5em;
+
+  letter-spacing: .15em;
+}
+
+#info {
+  &>header {
+    display: none;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: $base_font_size * 4;
+    font-size: 4rem;
+    font-weight: normal;
+  }
+
+  font-size: $base_font_size * 1.5;
+  font-size: 1.5rem;
+
+  letter-spacing: .15em;
+  line-height: 1.5em;
+}
+
+#time {
+  font-size: $base_font_size * 3;
+  font-size: 3rem;
+
+  border-right: 1px solid adjust-lightness($second_color, 25%);
+
+  .register {
+    font-size: $base_font_size;
+    font-size: 1rem;
+  }
+}
+
+#host {
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

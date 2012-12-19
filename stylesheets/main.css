@@ -1,0 +1,590 @@
+@charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans");
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+/* line 9, ../sass/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 13, ../sass/main.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* line 18, ../sass/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 23, ../sass/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 28, ../sass/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 37, ../sass/main.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 41, ../sass/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 47, ../sass/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 51, ../sass/main.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/**
+ * Modules
+ */
+/**
+ * Clear Fix
+ */
+/**
+ * Grid Count
+ */
+/**
+ * Arrow Maker
+ */
+/**
+ * Fonts
+ */
+/**
+ * Global Variables
+ */
+/**
+ * Global
+ */
+/* line 97, ../sass/main.scss */
+html {
+  font-size: 12px;
+}
+
+/* line 101, ../sass/main.scss */
+body {
+  font-size: 12px;
+  font-family: "Droid Sans", "Droid Sans Fallback", "微軟正黑體", "Microsoft JhengHei", "STHeiti", "Heiti TC", SimSun, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  padding-top: 300px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 111, ../sass/main.scss */
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/**
+ * UI Element
+ */
+/* line 120, ../sass/main.scss */
+.button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: .5em;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+/* line 127, ../sass/main.scss */
+.button.light {
+  background: white;
+}
+/* line 131, ../sass/main.scss */
+.button.normal {
+  color: white;
+  background: #a4c639;
+}
+/* line 136, ../sass/main.scss */
+.button.dark {
+  color: white;
+  background: #1a1a1a;
+}
+
+/**
+ * Grid
+ */
+/* line 146, ../sass/main.scss */
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* line 26, ../sass/_mixin.scss */
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+/* line 9, ../sass/_mixin.scss */
+.row:before, .row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 16, ../sass/_mixin.scss */
+.row:after {
+  clear: both;
+}
+
+/* line 32, ../sass/_mixin.scss */
+[class*="span"] {
+  margin-left: 20px;
+  float: left;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span1 {
+  margin-top: 1em;
+  width: 60px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span2 {
+  margin-top: 1em;
+  width: 140px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span3 {
+  margin-top: 1em;
+  width: 220px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span4 {
+  margin-top: 1em;
+  width: 300px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span5 {
+  margin-top: 1em;
+  width: 380px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span6 {
+  margin-top: 1em;
+  width: 460px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span7 {
+  margin-top: 1em;
+  width: 540px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span8 {
+  margin-top: 1em;
+  width: 620px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span9 {
+  margin-top: 1em;
+  width: 700px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span10 {
+  margin-top: 1em;
+  width: 780px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span11 {
+  margin-top: 1em;
+  width: 860px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span12 {
+  margin-top: 1em;
+  width: 940px;
+}
+
+/**
+ * Header
+ */
+/* line 158, ../sass/main.scss */
+header[role="header"] {
+  height: 300px;
+  width: 100%;
+  z-index: 999;
+  background: white;
+  position: fixed;
+  top: 0;
+  *zoom: 1;
+}
+/* line 160, ../sass/main.scss */
+header[role="header"] h1 {
+  text-indent: -999999px;
+  background: url('/images/banner_logo.png?1355869966') center;
+  width: 700px;
+  height: 200px;
+  margin: 0 auto;
+}
+/* line 9, ../sass/_mixin.scss */
+header[role="header"]:before, header[role="header"]:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 16, ../sass/_mixin.scss */
+header[role="header"]:after {
+  clear: both;
+}
+
+/**
+ * Footer
+ */
+/**
+ * Navigator
+ */
+/* line 197, ../sass/main.scss */
+nav[role="main_menu"] header {
+  display: none;
+}
+/* line 201, ../sass/main.scss */
+nav[role="main_menu"] ul {
+  text-align: center;
+  padding: 0;
+}
+/* line 207, ../sass/main.scss */
+nav[role="main_menu"] li {
+  display: inline;
+  font-size: 24px;
+  font-size: 2rem;
+}
+/* line 213, ../sass/main.scss */
+nav[role="main_menu"] li a {
+  display: inline-block;
+  color: #a6a6a6;
+  padding: .5em;
+  text-transform: uppercase;
+  position: relative;
+}
+/* line 224, ../sass/main.scss */
+nav[role="main_menu"] li a:hover {
+  color: #1a1a1a;
+}
+/* line 228, ../sass/main.scss */
+nav[role="main_menu"] li a.active {
+  color: white;
+  background: #a4c639;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 235, ../sass/main.scss */
+nav[role="main_menu"] li a.active:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top: 7px solid #a4c639;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -7px;
+}
+
+/**
+ * Main Frame
+ */
+/* line 265, ../sass/main.scss */
+#main_frame header h2 {
+  font-size: 48px;
+  font-size: 4rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* line 274, ../sass/main.scss */
+.section_green {
+  background: #a4c639;
+  color: white;
+  position: relative;
+  padding-bottom: 1em;
+}
+
+/* line 284, ../sass/main.scss */
+.section_black {
+  background: #1a1a1a;
+  color: white;
+  position: relative;
+  padding-bottom: 1em;
+}
+
+/* line 294, ../sass/main.scss */
+.attach_arrow_green {
+  padding-top: 50px;
+}
+/* line 297, ../sass/main.scss */
+.attach_arrow_green:after {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 35px solid transparent;
+  border-top: 35px solid #a4c639;
+  content: " ";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  margin-left: -35px;
+}
+
+/* line 310, ../sass/main.scss */
+.attach_arrow_black {
+  padding-top: 50px;
+}
+/* line 313, ../sass/main.scss */
+.attach_arrow_black:after {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 35px solid transparent;
+  border-top: 35px solid #1a1a1a;
+  content: " ";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  margin-left: -35px;
+}
+
+/**
+ * Each Part
+ */
+/* line 332, ../sass/main.scss */
+#about {
+  font-size: 24px;
+  font-size: 2rem;
+  line-height: 1.5em;
+  letter-spacing: .15em;
+}
+
+/* line 341, ../sass/main.scss */
+#info {
+  font-size: 18px;
+  font-size: 1.5rem;
+  letter-spacing: .15em;
+  line-height: 1.5em;
+}
+/* line 342, ../sass/main.scss */
+#info > header {
+  display: none;
+}
+/* line 346, ../sass/main.scss */
+#info h3 {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+/* line 360, ../sass/main.scss */
+#time {
+  font-size: 36px;
+  font-size: 3rem;
+  border-right: 1px solid #595959;
+}
+/* line 366, ../sass/main.scss */
+#time .register {
+  font-size: 12px;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 399, ../sass/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+/* line 406, ../sass/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* line 413, ../sass/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 418, ../sass/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 430, ../sass/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 439, ../sass/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 444, ../sass/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 449, ../sass/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 453, ../sass/main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  /* line 462, ../sass/main.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 470, ../sass/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 474, ../sass/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 478, ../sass/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 488, ../sass/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 493, ../sass/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 498, ../sass/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 503, ../sass/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 507, ../sass/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 517, ../sass/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 523, ../sass/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
