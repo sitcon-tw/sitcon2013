@@ -58,7 +58,11 @@ $(document).ready ->
   mapCanvas.height(400)
 
   map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions)
-  mapMarker = new google.maps.Marker({position: mapCenter, map: map, icon: '../images/location_pin.png'})
+  mapMarker = new google.maps.Marker({
+    position: mapCenter,
+    map: map,
+    icon: '../images/location_pin.png'
+  })
 
 ###
 # Scroll Menu

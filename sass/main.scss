@@ -216,6 +216,20 @@ header[role="header"] {
 
 footer[role="footer"] {
   letter-spacing: .15em;
+
+  font-size: $base_font_size * 1.1;
+  font-size: 1.1rem;
+
+  .social {
+    font-size: $base_font_size * 1.3;
+    font-size: 1.3rem;
+  }
+
+  .split {
+    margin: 0 .5em;
+
+    color: adjust-lightness(black, 35%);
+  }
 }
 
 /**
