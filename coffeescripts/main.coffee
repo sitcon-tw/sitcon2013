@@ -54,7 +54,7 @@ $(document).ready ->
 ###
 
 $(window).scroll (e)->
-  curTop = $("body").scrollTop()
+  curTop = $("body").scrollTop() || $("html").scrollTop()
 
   $("#main_menu a").each (i, el)->
     target = $($(el).attr("href"))

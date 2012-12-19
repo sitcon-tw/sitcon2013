@@ -60,7 +60,7 @@
 
   $(window).scroll(function(e) {
     var curTop;
-    curTop = $("body").scrollTop();
+    curTop = $("body").scrollTop() || $("html").scrollTop();
     return $("#main_menu a").each(function(i, el) {
       var height, offsetTop, target;
       target = $($(el).attr("href"));
