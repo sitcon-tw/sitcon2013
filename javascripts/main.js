@@ -77,11 +77,10 @@
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout((function() {
       if (curTop > 250) {
-        bannerHidden = hideBanner();
+        return bannerHidden = hideBanner();
       } else {
-        bannerHidden = showBanner();
+        return bannerHidden = showBanner();
       }
-      return console.log([curTop, maxScroll]);
     }), 100);
     if (curTop >= maxScroll) {
       $("#main_menu a").each(function(i, el) {

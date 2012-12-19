@@ -85,7 +85,6 @@ $(window).scroll (e)->
     else
       bannerHidden = showBanner()
 
-    console.log [curTop, maxScroll]
   ),100
 
   if curTop >= maxScroll
