@@ -380,6 +380,7 @@ nav[role="main_menu"] {
 #time {
   font-size: $base_font_size * 3;
   font-size: 3rem;
+  text-transform: uppercase;
 
   border-right: 1px solid adjust-lightness($second_color, 25%);
 

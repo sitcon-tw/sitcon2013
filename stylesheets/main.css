@@ -256,7 +256,7 @@ header[role="header"] {
 /* line 160, ../sass/main.scss */
 header[role="header"] h1 {
   text-indent: -999999px;
-  background: url('/images/banner_logo.png?1355869966') center;
+  background: url('../images/banner_logo.png?1355869966') center;
   width: 700px;
   height: 200px;
   margin: 0 auto;
@@ -450,38 +450,39 @@ nav[role="main_menu"] li a.active:after {
 #time {
   font-size: 36px;
   font-size: 3rem;
+  text-transform: uppercase;
   border-right: 1px solid #595959;
 }
-/* line 386, ../sass/main.scss */
+/* line 387, ../sass/main.scss */
 #time .register {
   font-size: 18px;
   font-size: 1.5rem;
 }
 
-/* line 398, ../sass/main.scss */
+/* line 399, ../sass/main.scss */
 #team h3 {
   font-size: 24px;
   font-size: 2rem;
   font-weight: normal;
   color: #595959;
 }
-/* line 406, ../sass/main.scss */
+/* line 407, ../sass/main.scss */
 #team h3 .leader {
   font-size: 14.00004px;
   font-size: 1.16667rem;
 }
 
-/* line 415, ../sass/main.scss */
+/* line 416, ../sass/main.scss */
 #speakers, #schedule, #sponsor {
   text-align: center;
   font-size: 36px;
   font-size: 3rem;
 }
-/* line 421, ../sass/main.scss */
+/* line 422, ../sass/main.scss */
 #speakers p, #schedule p, #sponsor p {
   text-transform: uppercase;
 }
-/* line 425, ../sass/main.scss */
+/* line 426, ../sass/main.scss */
 #speakers .span12, #schedule .span12, #sponsor .span12 {
   margin-top: 0;
 }
@@ -492,7 +493,7 @@ nav[role="main_menu"] li a.active:after {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 453, ../sass/main.scss */
+/* line 454, ../sass/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -500,7 +501,7 @@ nav[role="main_menu"] li a.active:after {
   *text-indent: -9999px;
 }
 
-/* line 460, ../sass/main.scss */
+/* line 461, ../sass/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -508,13 +509,13 @@ nav[role="main_menu"] li a.active:after {
   height: 100%;
 }
 
-/* line 467, ../sass/main.scss */
+/* line 468, ../sass/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 472, ../sass/main.scss */
+/* line 473, ../sass/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -526,7 +527,7 @@ nav[role="main_menu"] li a.active:after {
   width: 1px;
 }
 
-/* line 484, ../sass/main.scss */
+/* line 485, ../sass/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -537,24 +538,24 @@ nav[role="main_menu"] li a.active:after {
   width: auto;
 }
 
-/* line 493, ../sass/main.scss */
+/* line 494, ../sass/main.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 498, ../sass/main.scss */
+/* line 499, ../sass/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 503, ../sass/main.scss */
+/* line 504, ../sass/main.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 507, ../sass/main.scss */
+/* line 508, ../sass/main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -563,7 +564,7 @@ nav[role="main_menu"] li a.active:after {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 516, ../sass/main.scss */
+  /* line 517, ../sass/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -572,18 +573,18 @@ nav[role="main_menu"] li a.active:after {
     text-shadow: none !important;
   }
 
-  /* line 524, ../sass/main.scss */
+  /* line 525, ../sass/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 528, ../sass/main.scss */
+  /* line 529, ../sass/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 532, ../sass/main.scss */
+  /* line 533, ../sass/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -591,33 +592,33 @@ nav[role="main_menu"] li a.active:after {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 542, ../sass/main.scss */
+  /* line 543, ../sass/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 547, ../sass/main.scss */
+  /* line 548, ../sass/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 552, ../sass/main.scss */
+  /* line 553, ../sass/main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 557, ../sass/main.scss */
+  /* line 558, ../sass/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 561, ../sass/main.scss */
+  /* line 562, ../sass/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -626,7 +627,7 @@ nav[role="main_menu"] li a.active:after {
     margin: 0.5cm;
 }
 
-  /* line 571, ../sass/main.scss */
+  /* line 572, ../sass/main.scss */
   p,
   h2,
   h3 {
@@ -634,7 +635,7 @@ nav[role="main_menu"] li a.active:after {
     widows: 3;
   }
 
-  /* line 577, ../sass/main.scss */
+  /* line 578, ../sass/main.scss */
   h2,
   h3 {
     page-break-after: avoid;
