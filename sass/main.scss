@@ -103,7 +103,7 @@ body {
   font-family: "Droid Sans", "Droid Sans Fallback", "微軟正黑體","Microsoft JhengHei", "STHeiti", "Heiti TC", SimSun,"Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: $base_line_height;
 
-  padding-top: 300px;
+  padding-top: 250px;
 
   -webkit-font-smoothing: antialiased;
 }
@@ -111,6 +111,20 @@ body {
 a {
   color: $second_color;
   text-decoration: none;
+
+  &.light {
+    color: $base_color;
+  }
+}
+
+hr {
+  border: none;
+
+  border-bottom: 1px solid $second_color;
+
+  &.light {
+    border-bottom: 1px solid white;
+  }
 }
 
 /**
@@ -120,7 +134,7 @@ a {
 .button {
   @include border-radius(5px);
 
-  padding: .5em;
+  padding: .5em .7em;
 
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
@@ -136,6 +150,21 @@ a {
   &.dark {
     color: white;
     background: $second_color;
+  }
+
+  &.large {
+    font-size: $base_font_size * 2;
+    font-size: 2rem;
+  }
+
+  &.middle {
+    font-size: $base_font_size * 1.5;
+    font-size: 1.5rem;
+  }
+
+  &.small {
+    font-size: $base_font_size;
+    font-size: 1rem;
   }
 }
 
@@ -163,12 +192,12 @@ header[role="header"] {
     background: image-url("banner_logo.png") center;
 
     width: 700px;
-    height: 200px;
+    height: 150px;
 
     margin: 0 auto;
   }
 
-  height: 300px;
+  height: 250px;
   width: 100%;
 
   z-index: 999;
@@ -423,16 +452,17 @@ nav[role="main_menu"] {
     text-transform: uppercase;
   }
 
-  .span12 {
+  .span12, .span6 {
     margin-top: 0;
   }
 }
 
-
-
-
-
-
+// Map
+#location {
+  header {
+    display: none;
+  }
+}
 
 /* ==========================================================================
    Media Queries
