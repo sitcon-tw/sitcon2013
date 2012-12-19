@@ -186,7 +186,7 @@ header[role="header"] {
  */
 
 footer[role="footer"] {
-
+  letter-spacing: .15em;
 }
 
 /**
@@ -276,8 +276,6 @@ nav[role="main_menu"] {
 
   color: white;
 
-  position: relative;
-
   padding-bottom: 1em;
 }
 
@@ -286,13 +284,13 @@ nav[role="main_menu"] {
 
   color: white;
 
-  position: relative;
-
   padding-bottom: 1em;
 }
 
 .attach_arrow_green {
   padding-top: 50px;
+
+  position: relative;
 
   &:after {
     @include makeArrow(35px, $base_color, "bottom");
@@ -310,8 +308,28 @@ nav[role="main_menu"] {
 .attach_arrow_black {
   padding-top: 50px;
 
+  position: relative;
+
   &:after {
     @include makeArrow(35px, $second_color, "bottom");
+
+    content: " ";
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+
+    margin-left: -35px;
+  }
+}
+
+.attach_arrow_white {
+  padding-top: 50px;
+
+  position: relative;
+
+  &:after {
+    @include makeArrow(35px, white, "bottom");
 
     content: " ";
 
@@ -337,6 +355,8 @@ nav[role="main_menu"] {
 
   letter-spacing: .15em;
 }
+
+// Info
 
 #info {
   &>header {
@@ -364,14 +384,48 @@ nav[role="main_menu"] {
   border-right: 1px solid adjust-lightness($second_color, 25%);
 
   .register {
-    font-size: $base_font_size;
-    font-size: 1rem;
+    font-size: $base_font_size * 1.5;
+    font-size: 1.5rem;
   }
 }
 
 #host {
 }
 
+// Team
+
+#team {
+  h3 {
+    font-size: $base_font_size * 2;
+    font-size: 2rem;
+
+    font-weight: normal;
+
+    color: adjust-lightness(black, 35%);
+
+    .leader {
+      font-size: $base_font_size * 1.16667;
+      font-size: 1.16667rem;
+    }
+  }
+}
+
+// Speakers
+
+#speakers, #schedule, #sponsor {
+  text-align: center;
+
+  font-size: $base_font_size * 3;
+  font-size: 3rem;
+
+  p {
+    text-transform: uppercase;
+  }
+
+  .span12 {
+    margin-top: 0;
+  }
+}
 
 
 
