@@ -418,6 +418,28 @@ nav[role="main_menu"] {
 
   letter-spacing: .15em;
   line-height: 1.5em;
+
+  .hint {
+    font-size: $base_font_size;
+    font-size: 1rem;
+
+    margin-left: .5em;
+  }
+
+  .register {
+    position: relative;
+
+    &:after {
+      @include makeArrow(5px, white, "right");
+
+      content: " ";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+
+      margin-top: -5px;
+    }
+  }
 }
 
 #time {
