@@ -58,7 +58,7 @@
     return mapMarker = new google.maps.Marker({
       position: mapCenter,
       map: map,
-      icon: '../images/location_pin.png'
+      icon: 'images/location_pin.png'
     });
   });
 
