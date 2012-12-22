@@ -122,10 +122,10 @@ a {
 hr {
   border: none;
 
-  border-bottom: 1px solid $second_color;
+  border-bottom: 1px solid adjust-lightness(black, 90%);
 
   &.light {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid adjust-lightness(black, 20%);
   }
 }
 
