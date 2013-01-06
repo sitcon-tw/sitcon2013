@@ -1,0 +1,26 @@
+/**
+ * RWD Design
+ */
+
+@import "mixin";
+
+@media (max-width: 979px) {
+  .container {
+    width: 96%;
+  }
+
+  @include makeMobileGrid(8, 20px);
+}
+
+@media (max-width: 767px) {
+
+  @include makeMobileGrid(4, 20px);
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
