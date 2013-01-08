@@ -44,6 +44,35 @@
 }
 
 /**
+ * Make Mobile Grid
+ */
+
+@mixin makeMobileGrid($column, $gutter) {
+  [class*="mobile"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  [class*="span"] {
+    margin-left: 0;
+    padding-left: $gutter;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+
+  $width: 100%/$column;
+
+  @for $i from 1 through $column {
+    .mobile#{$i} {
+      width: $width * $i;
+    }
+  }
+}
+
+/**
  * Arrow Maker
  */
 
@@ -65,3 +94,5 @@
     border-left: $size solid $color;
   }
 }
+
+
