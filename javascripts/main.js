@@ -1,9 +1,15 @@
 (function() {
-  var bannerHidden, hideBanner, scrollTimeout, showBanner;
+  var bannerHidden, hideBanner, scrollTimeout, showBanner, smallScreen;
 
   bannerHidden = false;
 
+  smallScreen = false;
+
   $(document).ready(function() {
+    var map, mapCanvas, mapCenter, mapMarker, mapOptions;
+    smallScreen = function() {
+      return Modernizr.mq("(max-width: 480px)");
+    };
     /*
       # Menu Manager
     */
@@ -14,8 +20,7 @@
       }, {druation: 3000, easing: "easeInOutQuad"}
     */
 
-    var map, mapCanvas, mapCenter, mapMarker, mapOptions;
-    $("#main_menu a").click(function(e) {
+    $("#main_menu ul a").click(function(e) {
       var offset, target, topFix;
       target = $($(this).attr("href"));
       topFix = 0;
@@ -23,6 +28,9 @@
         topFix = 98;
       } else {
         topFix = 248;
+      }
+      if (smallScreen()) {
+        topFix = 53;
       }
       offset = 0;
       if (target.hasClass("attach_arrow_green") || target.hasClass("attach_arrow_black") || target.hasClass("attach_arrow_white")) {
@@ -34,6 +42,13 @@
         druation: 3000,
         easing: "easeInOutQuad"
       });
+      if (smallScreen()) {
+        $("#main_menu ul").toggle("fast");
+      }
+      return e.preventDefault();
+    });
+    $("#main_menu h2 a").click(function(e) {
+      $("#main_menu ul").toggle("fast");
       return e.preventDefault();
     });
     /*
@@ -76,10 +91,12 @@
     topFix = 0;
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout((function() {
-      if (curTop > 250) {
-        return bannerHidden = hideBanner();
-      } else {
-        return bannerHidden = showBanner();
+      if (!smallScreen()) {
+        if (curTop > 250) {
+          return bannerHidden = hideBanner();
+        } else {
+          return bannerHidden = showBanner();
+        }
       }
     }), 100);
     if (curTop >= maxScroll) {

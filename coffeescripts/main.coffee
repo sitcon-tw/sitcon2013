@@ -1,7 +1,11 @@
 
 bannerHidden = false
+smallScreen = false
 
 $(document).ready ->
+
+  smallScreen = ()->
+    Modernizr.mq("(max-width: 480px)")
 
   ###
   # Menu Manager
@@ -13,7 +17,7 @@ $(document).ready ->
   }, {druation: 3000, easing: "easeInOutQuad"}
   ###
 
-  $("#main_menu a").click (e)->
+  $("#main_menu ul a").click (e)->
 
     target = $($(this).attr("href"))
 
@@ -24,6 +28,9 @@ $(document).ready ->
     else
       topFix = 248
 
+    if smallScreen()
+      topFix = 53
+
     offset = 0
 
     if target.hasClass("attach_arrow_green") || target.hasClass("attach_arrow_black") || target.hasClass("attach_arrow_white")
@@ -32,6 +39,14 @@ $(document).ready ->
     $("html, body").animate {
       scrollTop: target.offset().top - topFix + offset
     }, {druation: 3000, easing: "easeInOutQuad"}
+
+    if smallScreen()
+      $("#main_menu ul").toggle("fast")
+
+    e.preventDefault();
+
+  $("#main_menu h2 a").click (e) ->
+    $("#main_menu ul").toggle("fast")
 
     e.preventDefault();
 
@@ -80,10 +95,11 @@ $(window).scroll (e)->
   clearTimeout(scrollTimeout)
 
   scrollTimeout = setTimeout (()->
-    if curTop > 250
-      bannerHidden = hideBanner()
-    else
-      bannerHidden = showBanner()
+    if !smallScreen()
+      if curTop > 250
+        bannerHidden = hideBanner()
+      else
+        bannerHidden = showBanner()
 
   ),100
 
