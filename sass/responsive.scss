@@ -29,9 +29,14 @@
 @media (min-width: 480px) and (max-width: 767px) {
   nav[role="main_menu"] {
     li {
-      font-size: $base_font_size;
-      font-size: 1rem;
+      font-size: $base_font_size * 1.2;
+      font-size: 1.2rem;
     }
+  }
+
+  #time {
+    border: none;
+    border-bottom: 1px solid adjust-lightness($second_color, 25%);
   }
 }
 
@@ -118,5 +123,10 @@
         }
       }
     }
+  }
+
+  #time {
+    border: none;
+    border-bottom: 1px solid adjust-lightness($second_color, 25%);
   }
 }
