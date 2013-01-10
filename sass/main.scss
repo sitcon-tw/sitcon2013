@@ -384,7 +384,7 @@ nav[role="main_menu"] {
 
 // About
 
-#about {
+#about, #talks, #subject, #ways_to_submit  {
   font-size: $base_font_size * 2;
   font-size: 2rem;
 
@@ -493,6 +493,8 @@ nav[role="main_menu"] {
     display: none;
   }
 }
+
+// CFP -
 
 /* ==========================================================================
    Media Queries

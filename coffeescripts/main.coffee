@@ -11,11 +11,9 @@ $(document).ready ->
   # Menu Manager
   ###
 
-  ###
   $("html, body").animate {
     scrollTop: 0
   }, {druation: 3000, easing: "easeInOutQuad"}
-  ###
 
   $("#main_menu ul a").click (e)->
 
@@ -116,14 +114,17 @@ $(window).scroll (e)->
     topFix = 250
 
   $("#main_menu a").each (i, el)->
-    target = $($(el).attr("href"))
-    offsetTop = Math.floor(target.offset().top) - topFix
-    height = $(target).outerHeight()
+    link = $(el).attr("href");
 
-    if (curTop >= offsetTop) and (curTop < (offsetTop + height))
-      $(el).addClass("active")
-    else
-      $(el).removeClass("active")
+    if link.indexOf("#") > -1
+      target = $(link)
+      offsetTop = Math.floor(target.offset().top) - topFix
+      height = $(target).outerHeight()
+
+      if (curTop >= offsetTop) and (curTop < (offsetTop + height))
+        $(el).addClass("active")
+      else
+        $(el).removeClass("active")
 
 hideBanner = ->
   if !bannerHidden

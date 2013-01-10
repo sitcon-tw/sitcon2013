@@ -14,12 +14,12 @@
       # Menu Manager
     */
 
-    /*
-      $("html, body").animate {
-        scrollTop: 0
-      }, {druation: 3000, easing: "easeInOutQuad"}
-    */
-
+    $("html, body").animate({
+      scrollTop: 0
+    }, {
+      druation: 3000,
+      easing: "easeInOutQuad"
+    });
     $("#main_menu ul a").click(function(e) {
       var offset, target, topFix;
       target = $($(this).attr("href"));
@@ -112,14 +112,17 @@
       topFix = 250;
     }
     return $("#main_menu a").each(function(i, el) {
-      var height, offsetTop, target;
-      target = $($(el).attr("href"));
-      offsetTop = Math.floor(target.offset().top) - topFix;
-      height = $(target).outerHeight();
-      if ((curTop >= offsetTop) && (curTop < (offsetTop + height))) {
-        return $(el).addClass("active");
-      } else {
-        return $(el).removeClass("active");
+      var height, link, offsetTop, target;
+      link = $(el).attr("href");
+      if (link.indexOf("#") > -1) {
+        target = $(link);
+        offsetTop = Math.floor(target.offset().top) - topFix;
+        height = $(target).outerHeight();
+        if ((curTop >= offsetTop) && (curTop < (offsetTop + height))) {
+          return $(el).addClass("active");
+        } else {
+          return $(el).removeClass("active");
+        }
       }
     });
   });
