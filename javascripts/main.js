@@ -100,10 +100,10 @@
       }
     }), 100);
     if (curTop >= maxScroll) {
-      $("#main_menu a").each(function(i, el) {
+      $("#main_menu ul a").each(function(i, el) {
         return $(el).removeClass("active");
       });
-      $("#main_menu a:last").addClass("active");
+      $("#main_menu ul a:last").addClass("active");
       return;
     }
     if (bannerHidden) {
@@ -111,13 +111,14 @@
     } else {
       topFix = 250;
     }
-    return $("#main_menu a").each(function(i, el) {
+    return $("#main_menu ul a").each(function(i, el) {
       var height, link, offsetTop, target;
       link = $(el).attr("href");
       if (link.indexOf("#") > -1) {
         target = $(link);
         offsetTop = Math.floor(target.offset().top) - topFix;
         height = $(target).outerHeight();
+        console.log(offsetTop);
         if ((curTop >= offsetTop) && (curTop < (offsetTop + height))) {
           return $(el).addClass("active");
         } else {

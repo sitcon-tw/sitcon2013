@@ -102,10 +102,10 @@ $(window).scroll (e)->
   ),100
 
   if curTop >= maxScroll
-    $("#main_menu a").each (i, el)->
+    $("#main_menu ul a").each (i, el)->
       $(el).removeClass("active")
 
-    $("#main_menu a:last").addClass("active")
+    $("#main_menu ul a:last").addClass("active")
     return
 
   if bannerHidden
@@ -113,13 +113,15 @@ $(window).scroll (e)->
   else
     topFix = 250
 
-  $("#main_menu a").each (i, el)->
-    link = $(el).attr("href");
+  $("#main_menu ul a").each (i, el)->
+    link = $(el).attr("href")
 
     if link.indexOf("#") > -1
       target = $(link)
       offsetTop = Math.floor(target.offset().top) - topFix
       height = $(target).outerHeight()
+
+      console.log offsetTop
 
       if (curTop >= offsetTop) and (curTop < (offsetTop + height))
         $(el).addClass("active")
