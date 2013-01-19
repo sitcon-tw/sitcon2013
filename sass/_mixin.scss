@@ -73,6 +73,23 @@
 }
 
 /**
+ * Responsive Web Design
+ */
+
+@mixin respondTo($media) {
+  @if $media == "handhelds" {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $media == "wide-handhelds" {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == "tablets" {
+    @media only screen and (max-width: 979px) { @content; }
+  }
+
+}
+
+/**
  * Arrow Maker
  */
 
