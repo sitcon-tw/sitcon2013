@@ -121,8 +121,6 @@ $(window).scroll (e)->
       offsetTop = Math.floor(target.offset().top) - topFix
       height = $(target).outerHeight()
 
-      console.log offsetTop
-
       if (curTop >= offsetTop) and (curTop < (offsetTop + height))
         $(el).addClass("active")
       else
@@ -133,6 +131,7 @@ hideBanner = ->
     $("body").animate {
       'paddingTop': 100
     }, {duration: 1000, easing: "easeInOutQuad"}
+    ###
     $("header[role=header]").animate {
       'height': 100
     }, {duration: 1000, easing: "easeOutQuad"}
@@ -140,6 +139,9 @@ hideBanner = ->
       height: 0,
       opacity: 0
     }, {duration: 1000, easing: "easeOutQuad"}
+    ###
+
+    $("header[role=header]").addClass("close")
 
   return true
 
@@ -148,6 +150,7 @@ showBanner = ->
     $("body").animate {
       'paddingTop': 250
     }, {duration: 1000, easing: "easeInOutQuad"}
+    ###
     $("header[role=header]").animate {
       height: 250
     }, {duration: 1000, easing: "easeInQuad"}
@@ -155,6 +158,9 @@ showBanner = ->
       height: 150,
       opacity: 1
     }, {duration: 1000, easing: "easeInQuad"}
+    ###
+
+    $("header[role=header]").removeClass("close")
 
   return false
 

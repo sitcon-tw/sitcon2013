@@ -118,7 +118,6 @@
         target = $(link);
         offsetTop = Math.floor(target.offset().top) - topFix;
         height = $(target).outerHeight();
-        console.log(offsetTop);
         if ((curTop >= offsetTop) && (curTop < (offsetTop + height))) {
           return $(el).addClass("active");
         } else {
@@ -136,19 +135,17 @@
         duration: 1000,
         easing: "easeInOutQuad"
       });
-      $("header[role=header]").animate({
-        'height': 100
-      }, {
-        duration: 1000,
-        easing: "easeOutQuad"
-      });
-      $("header[role=header] h1").animate({
-        height: 0,
-        opacity: 0
-      }, {
-        duration: 1000,
-        easing: "easeOutQuad"
-      });
+      /*
+          $("header[role=header]").animate {
+            'height': 100
+          }, {duration: 1000, easing: "easeOutQuad"}
+          $("header[role=header] h1").animate {
+            height: 0,
+            opacity: 0
+          }, {duration: 1000, easing: "easeOutQuad"}
+      */
+
+      $("header[role=header]").addClass("close");
     }
     return true;
   };
@@ -161,19 +158,17 @@
         duration: 1000,
         easing: "easeInOutQuad"
       });
-      $("header[role=header]").animate({
-        height: 250
-      }, {
-        duration: 1000,
-        easing: "easeInQuad"
-      });
-      $("header[role=header] h1").animate({
-        height: 150,
-        opacity: 1
-      }, {
-        duration: 1000,
-        easing: "easeInQuad"
-      });
+      /*
+          $("header[role=header]").animate {
+            height: 250
+          }, {duration: 1000, easing: "easeInQuad"}
+          $("header[role=header] h1").animate {
+            height: 150,
+            opacity: 1
+          }, {duration: 1000, easing: "easeInQuad"}
+      */
+
+      $("header[role=header]").removeClass("close");
     }
     return false;
   };

@@ -37,6 +37,7 @@ body {
   }
 
   -webkit-font-smoothing: antialiased;
+  font-size-adjust: none;
 }
 
 a {
@@ -142,6 +143,8 @@ header[role="header"] {
 
     margin: 0 auto;
 
+    @include transition(1s);
+
     @include respondTo(handhelds) {
       text-indent: 0;
 
@@ -149,6 +152,14 @@ header[role="header"] {
 
       width: auto;
       height: auto;
+    }
+  }
+
+  &.close {
+    height: 100px;
+
+    h1 {
+      height: 0;
     }
   }
 
@@ -167,6 +178,8 @@ header[role="header"] {
 
     padding: 10px 0;
   }
+
+  @include transition(1s);
 
   @include clearfix();
 }
@@ -533,6 +546,9 @@ nav[role="main_menu"] {
 }
 
 #host {
+}
+
+#co-host {
 }
 
 // Team
