@@ -24,6 +24,7 @@
 
 html {
   font-size: $base_font_size;
+  -webkit-font-size-adjust: none;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
   @include transition(1s);
 
   -webkit-font-smoothing: antialiased;
-  font-size-adjust: none;
+  -webkit-font-size-adjust: none;
 
   &.close {
     padding-top: 100px;
@@ -526,16 +527,16 @@ nav[role="main_menu"] {
   font-size: 3rem;
   text-transform: uppercase;
 
-  border-right: 1px solid adjust-lightness($second_color, 25%);
+  border-right: 1px solid adjust-lightness(black, 20%);
 
   @include respondTo(wide-handhelds) {
     border: none;
-    border-bottom: 1px solid adjust-lightness($second_color, 25%);
+    border-bottom: 1px solid adjust-lightness(black, 20%);
   }
 
   @include respondTo(handhelds) {
     border: none;
-    border-bottom: 1px solid adjust-lightness($second_color, 25%);
+    border-bottom: 1px solid adjust-lightness(black, 20%);
 
     font-size: $base_font_size * 1.2;
     font-size: 1.2rem;
@@ -552,9 +553,14 @@ nav[role="main_menu"] {
 }
 
 #host {
+  a {
+    color: white;
+  }
 }
 
 #co-host {
+  display: none;
+  @include transition(1s);
 }
 
 // Team
