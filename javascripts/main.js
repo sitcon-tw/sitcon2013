@@ -129,13 +129,10 @@
 
   hideBanner = function() {
     if (!bannerHidden) {
-      $("body").animate({
-        'paddingTop': 100
-      }, {
-        duration: 1000,
-        easing: "easeInOutQuad"
-      });
       /*
+          $("body").animate {
+            'paddingTop': 100
+          }, {duration: 1000, easing: "easeInOutQuad"}
           $("header[role=header]").animate {
             'height': 100
           }, {duration: 1000, easing: "easeOutQuad"}
@@ -145,6 +142,7 @@
           }, {duration: 1000, easing: "easeOutQuad"}
       */
 
+      $("body").addClass("close");
       $("header[role=header]").addClass("close");
     }
     return true;
@@ -152,13 +150,10 @@
 
   showBanner = function() {
     if (bannerHidden) {
-      $("body").animate({
-        'paddingTop': 250
-      }, {
-        duration: 1000,
-        easing: "easeInOutQuad"
-      });
       /*
+          $("body").animate {
+            'paddingTop': 250
+          }, {duration: 1000, easing: "easeInOutQuad"}
           $("header[role=header]").animate {
             height: 250
           }, {duration: 1000, easing: "easeInQuad"}
@@ -168,6 +163,7 @@
           }, {duration: 1000, easing: "easeInQuad"}
       */
 
+      $("body").removeClass("close");
       $("header[role=header]").removeClass("close");
     }
     return false;

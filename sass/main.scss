@@ -36,8 +36,14 @@ body {
     padding-top: 55px;
   }
 
+  @include transition(1s);
+
   -webkit-font-smoothing: antialiased;
   font-size-adjust: none;
+
+  &.close {
+    padding-top: 100px;
+  }
 }
 
 a {
