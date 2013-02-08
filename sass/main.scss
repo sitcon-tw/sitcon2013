@@ -553,14 +553,20 @@ nav[role="main_menu"] {
 }
 
 #host {
-  a {
-    color: white;
+  .co-host {
+    a {
+      color: $base_color;
+    }
   }
 }
 
 #co-host {
   display: none;
   @include transition(1s);
+
+  .hint {
+    color: $base_color;
+  }
 }
 
 // Team
