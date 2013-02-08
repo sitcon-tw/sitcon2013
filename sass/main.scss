@@ -593,7 +593,7 @@ nav[role="main_menu"] {
 
 // Speakers
 
-#speakers, #schedule, #sponsor {
+%hint {
   text-align: center;
 
   font-size: $base_font_size * 3;
@@ -610,6 +610,23 @@ nav[role="main_menu"] {
 
   .span12, .span6 {
     margin-top: 0;
+  }
+}
+
+#speakers, #schedule {
+  @extend %hint;
+}
+
+// Sponsor
+#sponsor {
+  text-align: center;
+
+  .list>a{
+    margin-right: 25px;
+  }
+
+  .hint {
+    @extend %hint;
   }
 }
 
