@@ -639,14 +639,15 @@ nav[role="main_menu"] {
   border-collapse: separate;
   border-spacing: 2px;
 
+  margin: 2em auto;
+
   tr:nth-child(even) {
     background: darken($base_color, 3%);
   }
 
   td {
     text-align: center;
-
-    font-weight: bold;
+    text-shadow: #252 2px 2px;
   }
 
   th {
@@ -660,7 +661,7 @@ nav[role="main_menu"] {
 
   .talker, .host {
     display: block;
-    font-weight: normal;
+    text-shadow: none;
 
     font-size: $base_font_size * 1.2;
     font-size: 1.2rem;
