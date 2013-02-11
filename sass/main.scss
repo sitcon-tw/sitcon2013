@@ -619,8 +619,42 @@ nav[role="main_menu"] {
   }
 }
 
-#speakers, #schedule {
+#speakers {
   @extend %hint;
+}
+
+// Schudle
+#schedule {
+  text-align: center;
+}
+
+#schedule-table {
+  width: 100%;
+
+  border: 1px solid white;
+
+  tr {
+    border: 1px solid white;
+  }
+
+  td {
+    text-align: center;
+    border: 1px solid white;
+
+    font-weight: bold;
+  }
+
+  th {
+    background: white;
+    color: $base_color;
+    border: 1px solid white;
+    text-align: center;
+  }
+
+  .talker, .host {
+    display: block;
+    font-weight: normal;
+  }
 }
 
 // Sponsor
