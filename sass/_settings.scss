@@ -6,7 +6,7 @@ $base_font_size: 12px;
 $base_line_height: $base_font_size * 1.5;
 
 //$base_color: #a4c639;
-$base_color: #40a800;
+$base_color: darken(#40a800, 10%);
 //$base_color: #5eab1f;
 $second_color: adjust-lightness(black, 10%);
 $third_color: adjust-lightness(black, 65%);
