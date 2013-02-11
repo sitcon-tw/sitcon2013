@@ -11,9 +11,11 @@ $(document).ready ->
   # Menu Manager
   ###
 
+  ###
   $("html, body").animate {
     scrollTop: 0
   }, {druation: 3000, easing: "easeInOutQuad"}
+  ###
 
   $("#main_menu ul a").click (e)->
 
