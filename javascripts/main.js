@@ -8,7 +8,7 @@
   $(document).ready(function() {
     var map, mapCanvas, mapCenter, mapMarker, mapOptions;
     smallScreen = function() {
-      return Modernizr.mq("(max-width: 480px)");
+      return Modernizr.mq("(max-width: 767px)");
     };
     /*
       # Menu Manager

@@ -5,7 +5,7 @@ smallScreen = false
 $(document).ready ->
 
   smallScreen = ()->
-    Modernizr.mq("(max-width: 480px)")
+    Modernizr.mq("(max-width: 767px)")
 
   ###
   # Menu Manager

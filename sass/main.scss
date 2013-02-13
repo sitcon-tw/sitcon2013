@@ -34,6 +34,7 @@ body {
 
   padding-top: 250px;
   @include respondTo(handhelds) {
+    font-size: $base_font_size * 1.1;
     padding-top: 55px;
   }
 
@@ -106,8 +107,8 @@ p {
   }
 
   &.small {
-    font-size: $base_font_size;
-    font-size: 1rem;
+    font-size: $base_font_size * 1.1;
+    font-size: 1.1rem;
   }
 }
 
@@ -126,9 +127,6 @@ p {
 @include makeGrid(60px, 12, 20px);
 @include respondTo(tablets) {
   @include makeMobileGrid(8, 20px);
-}
-@include respondTo(wide-handhelds) {
-  @include makeMobileGrid(4, 20px);
 }
 @include respondTo(handhelds) {
   @include makeMobileGrid(4, 20px);
@@ -242,7 +240,8 @@ nav[role="main_menu"] {
       text-align: right;
 
       h2 {
-        font-size: $base_font_size;
+        font-size: $base_font_size * 1.1;
+        font-size: 1.1rem;
         text-transform: uppercase;
 
         a {
@@ -276,7 +275,7 @@ nav[role="main_menu"] {
     font-size: $base_font_size * 2;
     font-size: 2rem;
 
-    @include respondTo(wide-handhelds) {
+    @include respondTo(tablets) {
       font-size: $base_font_size * 1.5;
       font-size: 1.5rem;
     }
@@ -284,8 +283,8 @@ nav[role="main_menu"] {
     @include respondTo(handhelds) {
       display: block;
 
-      font-size: $base_font_size;
-      font-size: 1rem;
+      font-size: $base_font_size * 1.1;
+      font-size: 1.1rem;
     }
 
     a {
@@ -500,8 +499,8 @@ nav[role="main_menu"] {
   }
 
   .hint {
-    font-size: $base_font_size;
-    font-size: 1rem;
+    font-size: $base_font_size * 1.1;
+    font-size: 1.1rem;
 
     margin-left: .5em;
   }
@@ -529,11 +528,6 @@ nav[role="main_menu"] {
 
   border-right: 1px solid adjust-lightness(black, 20%);
 
-  @include respondTo(wide-handhelds) {
-    border: none;
-    border-bottom: 1px solid adjust-lightness(black, 20%);
-  }
-
   @include respondTo(handhelds) {
     border: none;
     border-bottom: 1px solid adjust-lightness(black, 20%);
@@ -546,8 +540,8 @@ nav[role="main_menu"] {
     font-size: 1.5rem;
 
     @include respondTo(handhelds) {
-      font-size: $base_font_size;
-      font-size: 1rem;
+      font-size: $base_font_size * 1.1;
+      font-size: 1.1rem;
     }
   }
 }
@@ -590,8 +584,8 @@ nav[role="main_menu"] {
       font-size: 1.16667rem;
 
       @include respondTo(handhelds) {
-        font-size: $base_font_size;
-        font-size: 1rem;
+        font-size: $base_font_size * 1.1;
+        font-size: 1.1rem;
       }
     }
   }
