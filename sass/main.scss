@@ -667,8 +667,20 @@ nav[role="main_menu"] {
 #sponsor {
   text-align: center;
 
-  .list>a{
-    margin-right: 25px;
+  .list {
+    @include clearfix;
+  }
+
+  .list > a {
+    float: left;
+    display: block;
+
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+
+    img {
+      width: 100%;
+    }
   }
 
   .hint {
