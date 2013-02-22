@@ -199,6 +199,8 @@ footer[role="footer"] {
   font-size: $base_font_size * 1.1;
   font-size: 1.1rem;
 
+  margin-top: 2em;
+
   .social {
     //font-size: $base_font_size * 1.3;
     //font-size: 1.3rem;
@@ -589,6 +591,27 @@ nav[role="main_menu"] {
         font-size: 1.1rem;
       }
     }
+  }
+
+  .avatar {
+    float: left;
+
+    img {
+      @include border-radius(50%);
+    }
+  }
+
+  .member {
+    float: left;
+
+    margin-left: 1.5em;
+
+    font-size: $base_font_size * 1.1;
+    font-size: 1.1rem;
+  }
+
+  a {
+    color: $base_color;
   }
 }
 
