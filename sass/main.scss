@@ -593,8 +593,18 @@ nav[role="main_menu"] {
     }
   }
 
+  h4 {
+    margin: .5em 0;
+  }
+
+  .info {
+    height: 100%;
+  }
+
   .avatar {
     float: left;
+
+    margin: 1.5em;
 
     img {
       @include border-radius(50%);
@@ -602,12 +612,12 @@ nav[role="main_menu"] {
   }
 
   .member {
-    float: left;
-
-    margin-left: 1.5em;
-
     font-size: $base_font_size * 1.1;
     font-size: 1.1rem;
+
+    line-height: 1.5em;
+
+    vertical-align: middle;
   }
 
   a {
