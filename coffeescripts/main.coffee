@@ -19,7 +19,8 @@ $(document).ready ->
 
   $("#main_menu ul a").click (e)->
 
-    target = $($(this).attr("href"))
+    link = $(this).attr("href")
+    target = $(link)
 
     topFix = 0
 
@@ -35,6 +36,10 @@ $(document).ready ->
 
     if target.hasClass("attach_arrow_green") || target.hasClass("attach_arrow_black") || target.hasClass("attach_arrow_white")
       offset = 35
+
+    if _gaq
+      _gaq.push(['_trackPageview', "/#{link}"])
+
 
     $("html, body").animate {
       scrollTop: target.offset().top - topFix + offset

@@ -21,8 +21,9 @@
     */
 
     $("#main_menu ul a").click(function(e) {
-      var offset, target, topFix;
-      target = $($(this).attr("href"));
+      var link, offset, target, topFix;
+      link = $(this).attr("href");
+      target = $(link);
       topFix = 0;
       if (bannerHidden) {
         topFix = 98;
@@ -35,6 +36,9 @@
       offset = 0;
       if (target.hasClass("attach_arrow_green") || target.hasClass("attach_arrow_black") || target.hasClass("attach_arrow_white")) {
         offset = 35;
+      }
+      if (_gaq) {
+        _gaq.push(['_trackPageview', "/" + link]);
       }
       $("html, body").animate({
         scrollTop: target.offset().top - topFix + offset
