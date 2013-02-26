@@ -568,7 +568,7 @@ nav[role="main_menu"] {
 
 // Team
 
-#team {
+#team, #speakers {
   h3 {
     font-size: $base_font_size * 2;
     font-size: 2rem;
@@ -598,30 +598,29 @@ nav[role="main_menu"] {
   }
 
   .info {
-    height: 100%;
+    line-height: 1.5em;
+
+    letter-spacing: .15em;
   }
 
   .avatar {
     float: left;
 
-    margin: 1.5em;
+    margin: $base_font_size * 1.5 0;
 
     img {
       @include border-radius(50%);
     }
   }
 
-  .member {
-    font-size: $base_font_size * 1.1;
-    font-size: 1.1rem;
-
-    line-height: 1.5em;
-
-    vertical-align: middle;
-  }
-
   a {
     color: $base_color;
+  }
+}
+
+#team {
+  .avatar {
+    margin: $base_font_size * 1.5;
   }
 }
 
@@ -648,7 +647,6 @@ nav[role="main_menu"] {
 }
 
 #speakers {
-  @extend %hint;
 }
 
 // Schudle
