@@ -606,7 +606,7 @@ nav[role="main_menu"] {
   .avatar {
     float: left;
 
-    margin: 1.5em;
+    margin: $base_font_size * 1.5 0;
 
     img {
       @include border-radius(50%);
@@ -615,6 +615,12 @@ nav[role="main_menu"] {
 
   a {
     color: $base_color;
+  }
+}
+
+#team {
+  .avatar {
+    margin: $base_font_size * 1.5;
   }
 }
 
