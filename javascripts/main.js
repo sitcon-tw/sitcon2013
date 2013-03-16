@@ -20,6 +20,11 @@
       }, {druation: 3000, easing: "easeInOutQuad"}
     */
 
+    $("#feedback").on('click', 'a', function() {
+      if (_gaq !== "undefined" && _gaq) {
+        return _gaq.push(['_trackEvent', 'Feedback', 'Click']);
+      }
+    });
     $("#main_menu ul a").click(function(e) {
       var link, offset, target, topFix;
       link = $(this).attr("href");

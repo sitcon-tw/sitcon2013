@@ -17,6 +17,10 @@ $(document).ready ->
   }, {druation: 3000, easing: "easeInOutQuad"}
   ###
 
+  $("#feedback").on 'click', 'a', ->
+    if _gaq != "undefined" and _gaq
+      _gaq.push(['_trackEvent', 'Feedback', 'Click'])
+
   $("#main_menu ul a").click (e)->
 
     link = $(this).attr("href")
