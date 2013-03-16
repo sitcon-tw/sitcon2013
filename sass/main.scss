@@ -728,3 +728,16 @@ nav[role="main_menu"] {
   }
 }
 
+
+// Feedback
+#feedback {
+  text-align: center;
+
+  header {
+    display: none;
+  }
+
+  p {
+    padding-bottom: 1em;
+  }
+}
